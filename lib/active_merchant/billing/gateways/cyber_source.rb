@@ -593,7 +593,7 @@ module ActiveMerchant #:nodoc:
       # Contact CyberSource, make the SOAP request, and parse the reply into a
       # Response object
       def commit(request, options)
-        puts "*** POSTING TO: #{test? ? TEST_URL : LIVE_URL}"
+        # puts "*** POSTING TO: #{test? ? TEST_URL : LIVE_URL}"
         response = parse(ssl_post(test? ? self.test_url : self.live_url, build_request(request, options)))
         puts "*** POSTING:"
         puts request
